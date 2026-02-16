@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Lumenpath Psychotherapy</title>
+    <meta name="description"
+        content="Book an appointment with Lumenpath Psychotherapy. Online and in-person sessions available.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">Lumenpath <span
+                            style="font-weight: 300; color: var(--primary-color);">Psychotherapy</span></a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html" class="active btn btn-primary"
+                            style="color: white; padding: 10px 20px;">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header text-center section-padding" style="background-color: var(--secondary-color);">
+        <div class="container">
+            <h1>Book an Appointment</h1>
+            <p>Begin your journey to wellness.</p>
+        </div>
+    </section>
+
+    <!-- Booking Info & Form -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="booking-info">
+                    <h2>Session Information</h2>
+                    <p>We offer both in-person and secure online video sessions to best suit your needs.</p>
+
+                    <div class="info-block" style="margin-top: 30px;">
+                        <h3><i class="fas fa-clock" style="color: var(--primary-color);"></i> Session Length</h3>
+                        <p>Standard individual sessions are 50 minutes.</p>
+                    </div>
+
+                    <div class="info-block" style="margin-top: 20px;">
+                        <h3><i class="fas fa-money-bill-wave" style="color: var(--primary-color);"></i> Fees & Insurance
+                        </h3>
+                        <p>Services are often covered by extended health benefits. Please check with your provider.</p>
+                    </div>
+
+                    <div class="info-block" style="margin-top: 20px;">
+                        <h3><i class="fas fa-user-shield" style="color: var(--primary-color);"></i> Confidentiality</h3>
+                        <p>Your privacy is paramount. All sessions are strictly confidential.</p>
+                    </div>
+                </div>
+
+                <div class="booking-form-container"
+                    style="background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h2>Request an Appointment</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Briefly describe what you are looking for..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lumenpath</h3>
+                    <p>Guiding you towards a brighter path of healing and self-discovery.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About Us</a>
+                    <a href="booking.html">Book Appointment</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> contact@lumenpath.com</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Oakville, ON</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lumenpath Psychotherapy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
