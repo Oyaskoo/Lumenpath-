@@ -1,13 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar Scroll Effect
+    // Smart Navbar Scroll Effect
     const header = document.querySelector('header');
+    let lastScrollTop = 0;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Downscroll
+            header.classList.add('nav-hidden');
+        } else {
+            // Upscroll
+            header.classList.remove('nav-hidden');
+        }
+
+        // Shadow/Style on scroll
+        if (scrollTop > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
+        lastScrollTop = scrollTop;
     });
 
     // Mobile Menu Toggle

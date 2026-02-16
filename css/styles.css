@@ -107,6 +107,10 @@ header.scrolled {
     background-color: rgba(255, 255, 255, 0.95);
 }
 
+header.nav-hidden {
+    transform: translateY(-100%);
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -211,8 +215,8 @@ header.scrolled .logo img {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../images/hero-therapy.jpg');
-    /* Light overlay */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/hero-therapy.jpg');
+    /* Darker overlay for contrast */
     background-size: cover;
     background-position: center;
     background-color: #f4f7f2;
@@ -222,7 +226,8 @@ header.scrolled .logo img {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--heading-color);
+    color: var(--white);
+    /* White text for contrast against dark overlay */
     text-align: center;
     position: relative;
 }
@@ -235,20 +240,24 @@ header.scrolled .logo img {
 .hero-content h1 {
     font-size: 3.8rem;
     margin-bottom: 24px;
-    color: var(--heading-color);
+    color: var(--white);
+    /* Force white */
     font-weight: 300;
     letter-spacing: -1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-tagline p {
     font-size: 1.3rem;
     font-weight: 300;
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 0.9);
+    /* High contrast white */
     margin-bottom: 50px;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-buttons {
@@ -256,6 +265,17 @@ header.scrolled .logo img {
     gap: 20px;
     justify-content: center;
     align-items: center;
+}
+
+/* Ensure secondary button is visible on dark background */
+#hero .btn-secondary {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+#hero .btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--heading-color);
 }
 
 /* Intro Section */
@@ -377,42 +397,54 @@ header.scrolled .logo img {
     display: block;
 }
 
-/* Footer */
+/* Footer (Amazon-style Multi-column) */
 footer {
-    background-color: var(--white);
+    background-color: #f8f9fa;
+    /* Soft background */
     color: var(--text-color);
-    padding: 100px 0 40px;
-    border-top: 1px solid #f0f0f0;
+    padding: 80px 0 40px;
+    border-top: 1px solid #eaeaea;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    justify-content: space-between;
 }
 
 .footer-section h3 {
     color: var(--heading-color);
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    /* Bolder */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .footer-section p,
 .footer-section a {
-    color: #777;
-    margin-bottom: 15px;
-    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
     display: block;
+    line-height: 1.6;
 }
 
 .footer-section a:hover {
     color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .footer-bottom {
-    margin-top: 70px;
+    margin-top: 60px;
     padding-top: 30px;
-    border-top: 1px solid #f9f9f9;
-    color: #aaa;
-    font-size: 0.85rem;
+    border-top: 1px solid #e0e0e0;
+    color: #888;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 /* Responsive */
