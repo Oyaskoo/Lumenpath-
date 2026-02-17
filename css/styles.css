@@ -102,7 +102,16 @@ img {
 }
 
 .page-header.compact-section {
-    padding: 40px 0;
+    padding: 40px 0 20px;
+}
+
+.compact-section h1,
+.compact-section h2 {
+    margin-bottom: 1rem;
+}
+
+.compact-section p {
+    margin-bottom: 1rem;
 }
 
 /* Header & Navigation */
