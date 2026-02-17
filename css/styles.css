@@ -97,6 +97,14 @@ img {
     text-align: center;
 }
 
+.compact-section {
+    padding: 60px 0;
+}
+
+.page-header.compact-section {
+    padding: 40px 0;
+}
+
 /* Header & Navigation */
 header {
     background-color: rgba(255, 255, 255, 0.98);
@@ -700,8 +708,22 @@ footer {
     }
 
     .section-padding {
-        padding: 80px 0;
+        padding: 60px 0;
         /* Reduced padding for mobile */
+    }
+
+    .compact-section {
+        padding: 40px 0;
+    }
+
+    .page-header.compact-section {
+        padding: 30px 0;
+    }
+
+    /* Remove extra top whitespace on mobile */
+    .page-header+.section-padding,
+    .page-header+.compact-section {
+        padding-top: 20px;
     }
 
     h2 {
