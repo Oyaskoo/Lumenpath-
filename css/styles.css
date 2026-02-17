@@ -225,67 +225,159 @@ header.scrolled .logo img {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/hero-therapy.jpg');
-    /* Darker overlay for contrast */
-    background-size: cover;
-    background-position: center;
-    background-color: #f4f7f2;
-    /* Fallback color */
-    height: 90vh;
-    min-height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
-    /* White text for contrast against dark overlay */
-    text-align: center;
+    background-color: #F0F5F1;
+    /* Soft neutral/sage tint */
+    padding: 100px 0;
+    min-height: auto;
+    display: block;
     position: relative;
+    overflow: hidden;
 }
 
-.hero-content {
-    max-width: 800px;
-    padding: 0 20px;
+#hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 60%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
 }
 
-.hero-content h1 {
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-tagline {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.hero-text h1 {
     font-size: 3.8rem;
-    margin-bottom: 24px;
-    color: var(--white);
-    /* Force white */
-    font-weight: 300;
-    letter-spacing: -1px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-heading);
+    color: #1a3c34;
+    /* Deep forest green / dark slate */
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-shadow: none;
+    font-weight: 400;
 }
 
-.hero-tagline p {
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
-    /* High contrast white */
-    margin-bottom: 50px;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+.hero-description {
+    font-size: 1.1rem;
+    color: #5a6e65;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    max-width: 500px;
 }
 
 .hero-buttons {
     display: flex;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
 }
 
-/* Ensure secondary button is visible on dark background */
-#hero .btn-secondary {
-    border-color: var(--white);
-    color: var(--white);
+/* Custom Button Styling for Hero to match reference */
+.hero-buttons .btn-primary {
+    background-color: #557A7B;
+    /* Muted Teal */
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(85, 122, 123, 0.2);
 }
 
-#hero .btn-secondary:hover {
-    background-color: var(--white);
-    color: var(--heading-color);
+.hero-buttons .btn-primary:hover {
+    background-color: #446263;
+    transform: translateY(-2px);
+}
+
+.hero-buttons .btn-secondary {
+    background-color: #7F9C78;
+    /* Sage Green */
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(127, 156, 120, 0.2);
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: #6C8566;
+    transform: translateY(-2px);
+}
+
+/* Hero Image Styling */
+.hero-image-container {
+    position: relative;
+    padding-left: 20px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50px 0 50px 0;
+    /* Organic leaf-like shape */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Background accent shape behind image */
+.hero-image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 100%;
+    height: 100%;
+    background-color: #CDE2D3;
+    /* Light Sage Accent */
+    z-index: -1;
+    border-radius: 50px 0 50px 0;
+}
+
+/* Hero Quote Section */
+.hero-quote {
+    padding: 60px 20px;
+    background-color: #F0F5F1;
+    /* Continue hero background or white? Let's go white or very light */
+    background: linear-gradient(to bottom, #F0F5F1 0%, #FFFFFF 100%);
+}
+
+.hero-quote p {
+    font-size: 1.6rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: #6C8566;
+    /* Muted Sage */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-weight: 300;
 }
 
 /* Intro Section */
@@ -514,7 +606,8 @@ footer {
     .intro-grid,
     .services-grid,
     .footer-content,
-    .service-detail {
+    .service-detail,
+    .hero-grid {
         grid-template-columns: 1fr;
         gap: 50px;
         text-align: center;
@@ -525,8 +618,23 @@ footer {
         margin: 0 auto 30px;
     }
 
-    .hero-content h1 {
+    .hero-text h1 {
         font-size: 2.8rem;
+    }
+
+    .hero-text {
+        text-align: center;
+        order: 1;
+    }
+
+    .hero-image-container {
+        order: 2;
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
     }
 
     .section-padding {
